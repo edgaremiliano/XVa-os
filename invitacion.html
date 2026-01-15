@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XV Años | Dana - Invitación Especial</title>
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Montserrat:wght@300;400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Música de fondo (Opcional, controlada por el usuario) -->
+    <button id="music-toggle" class="music-btn"><i class="fas fa-music"></i></button>
+    <audio id="bg-music" loop>
+        <source src="audio/MUSICAXV.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Hero Section -->
+    <header class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content scroll-animate">
+            <span class="sub-title">Mis Quince Años</span>
+            <h1 class="main-title">Dana</h1>
+            <div class="divider">
+                <span class="diamond"></span>
+            </div>
+            <p class="date">14 . MARZO . 2026</p>
+            <a href="#rsvp" class="cta-btn">Confirmar Asistencia</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Desliza</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Bienvenida / Frase -->
+    <section class="section quote-section" id="bienvenida">
+        <div class="container scroll-animate">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="quote-text">
+                "Hay momentos en la vida que son especiales por sí solos, pero compartirlos con las personas que amo los hace inolvidables."
+            </p>
+            <p class="quote-author">- Dana -</p>
+        </div>
+    </section>
+
+    <!-- Cuenta Regresiva -->
+    <section class="section countdown-section">
+        <div class="container">
+            <h2 class="section-title gold-text">Faltan</h2>
+            <div id="countdown" class="countdown-grid scroll-animate">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <span class="label">Días</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <span class="label">Hs</span>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <span class="label">Min</span>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <span class="label">Seg</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalles del Evento -->
+    <section class="section details-section" id="detalles">
+        <div class="container">
+            <h2 class="section-title">Celebración</h2>
+            <div class="details-grid">
+
+                <!-- Tarjeta Ceremonia -->
+                <div class="detail-card scroll-animate">
+                    <div class="icon-box">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h3>Ceremonia Religiosa</h3>
+                    <p class="time">4:00 PM</p>
+                    <p class="location">Parroquia de Nuestra Señora de Guadalupe</p>
+                    <p class="address">Av. Principal #123, Centro</p>
+                    <a href="https://www.google.com/maps/place/Parroquia+de+Nuestra+Se%C3%B1ora+de+Guadalupe/@19.5349537,-99.1787338,3737m/data=!3m1!1e3!4m10!1m2!2m1!1sIglesia+Nuestra+Se%C3%B1ora+de+Guadalupe!3m6!1s0x85d1f7f0786de425:0x2dfdec141d9142df!8m2!3d19.5349537!4d-99.1787338!15sCiRJZ2xlc2lhIE51ZXN0cmEgU2XDsW9yYSBkZSBHdWFkYWx1cGVaJiIkaWdsZXNpYSBudWVzdHJhIHNlw7FvcmEgZGUgZ3VhZGFsdXBlkgEPY2F0aG9saWNfY2h1cmNomgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxV2EySjZiRFJpYWxaNFVtMWplR1ZFWnpSaU1IUjNZakJ3Wms0ell4QULgAQD6AQQIABBJ!16s%2Fg%2F11c4bh8c60?entry=ttu&g_ep=EgoyMDI2MDExMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
+                        target="_blank" class="map-btn">Ver Mapa</a>
+                </div>
+
+                <!-- Tarjeta Recepción -->
+                <div class="detail-card scroll-animate delay-1">
+                    <div class="icon-box">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3>Recepción</h3>
+                    <p class="time">7:00 PM</p>
+                    <p class="location">Terrazas Belvedere</p>
+                    <p class="address">Blvd. Las Flores #500</p>
+                    <a href="https://www.google.com/maps/place/Terrazas+Belvedere/@19.5332941,-99.1807171,934m/data=!3m2!1e3!4b1!4m6!3m5!1s0x85d201358ee068cb:0xf90ddde07eddb5fe!8m2!3d19.5332891!4d-99.1781422!16s%2Fg%2F11c3k9qrcf?entry=ttu&g_ep=EgoyMDI2MDExMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
+                        target="_blank" class="map-btn">
+                        Ver Mapa
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerario -->
+    <section class="section itinerary-section" id="itinerario">
+        <div class="container">
+            <h2 class="section-title">Itinerario</h2>
+            <div class="timeline">
+                <div class="timeline-item scroll-animate left">
+                    <div class="content">
+                        <h3>16:00</h3>
+                        <p>Ceremonia Religiosa</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-animate right">
+                    <div class="content">
+                        <h3>19:00</h3>
+                        <p>Cóctel de Bienvenida</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-animate left">
+                    <div class="content">
+                        <h3>20:00</h3>
+                        <p>Entrada Triunfal y Vals</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-animate right">
+                    <div class="content">
+                        <h3>21:00</h3>
+                        <p>Cena y Brindis</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-animate left">
+                    <div class="content">
+                        <h3>23:00</h3>
+                        <p>Apertura de Pista</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Código de Vestimenta -->
+    <section class="section dresscode-section">
+        <div class="overlay-light"></div>
+        <div class="container scroll-animate">
+            <h2 class="section-title">Código de Vestimenta</h2>
+            <div class="icons-dress">
+                <i class="fas fa-user-tie"></i>
+                <span class="separator">|</span>
+                <i class="fas fa-female"></i>
+            </div>
+            <h3 class="dress-style">Formal - Etiqueta Rigurosa</h3>
+            <p class="dress-note">Reservado el color Azul Rey para la quinceañera.</p>
+
+            <div class="palette">
+                <div class="color-circle" style="background-color: #000;"></div>
+                <div class="color-circle" style="background-color: #7f8c8d;"></div> <!-- Gris Plata -->
+                <div class="color-circle" style="background-color: #d4af37;"></div> <!-- Dorado -->
+                <div class="color-circle" style="background-color: #1a1a1a;"></div> <!-- Negro Profundo -->
+            </div>
+            <p class="palette-text">Colores sugeridos para invitados</p>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="section gallery-section" id="galeria">
+        <div class="container">
+            <h2 class="section-title">Mis Momentos</h2>
+            <div class="gallery-grid">
+                <!-- Usando imágenes placeholder de Unsplash con temática elegante -->
+                <div class="gallery-item scroll-animate"><img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Foto 1"></div>
+                <div class="gallery-item scroll-animate"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Foto 2"></div>
+                <div class="gallery-item scroll-animate"><img src="https://images.unsplash.com/photo-1520854221256-17451cc330e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Foto 3"></div>
+                <div class="gallery-item scroll-animate"><img src="https://images.unsplash.com/photo-1544979590-37e9b47cd705?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Foto 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regalos / Sobre -->
+    <section class="section gift-section">
+        <div class="container scroll-animate">
+            <i class="fas fa-gift gift-icon"></i>
+            <h2 class="section-title">Mesa de Regalos</h2>
+            <p>El mejor regalo es tu presencia, pero si deseas tener un detalle conmigo:</p>
+
+            <div class="gift-options">
+                <div class="gift-card">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Lluvia de Sobres</h3>
+                    <p>Habrá un buzón en la recepción</p>
+                </div>
+                <!-- Ejemplo de tienda departamental -->
+                <!-- 
+                <div class="gift-card">
+                    <i class="fas fa-store"></i>
+                    <h3>Liverpool</h3>
+                    <p>Evento: 12345678</p>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section rsvp-section" id="rsvp">
+        <div class="container">
+            <div class="rsvp-card scroll-animate">
+                <h2 class="section-title">Confirmar Asistencia</h2>
+                <p>Por favor confirma tu asistencia antes del 1 de Agosto.</p>
+
+                <form class="rsvp-form" id="rsvpForm">
+                    <div class="form-group">
+                        <input type="text" id="nombre" required placeholder=" ">
+                        <label for="nombre">Nombre Completo</label>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="asistentes">
+                            <option value="1">1 Persona</option>
+                            <option value="2">2 Personas</option>
+                            <option value="3">3 Personas</option>
+                            <option value="4">4 Personas - Familia</option>
+                        </select>
+                        <label for="asistentes" class="static-label">Nº de Asistentes</label>
+                    </div>
+
+                    <div class="form-group radio-group">
+                        <p>¿Asistirás?</p>
+                        <label><input type="radio" name="asistencia" value="si" checked> ¡Claro que sí!</label>
+                        <label><input type="radio" name="asistencia" value="no"> Lo siento, no podré</label>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="mensaje" rows="3" placeholder=" "></textarea>
+                        <label for="mensaje">Mensaje para Dana (Opcional)</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-sign">Dana</p>
+            <p class="copyright">Gracias por ser parte de mi historia.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
