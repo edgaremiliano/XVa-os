@@ -1,21 +1,29 @@
 :root {
     /* Nueva Paleta: Azul Rey & Dorado Luxury */
-    --gold: #d4af37;           /* Dorado clásico */
-    --gold-light: #f3cf55;     /* Dorado brillo */
-    --silver: #bdc3c7;         /* Plata para detalles */
-    --royal-blue: #0f1c3f;     /* Azul noche profundo (Protagonista) */
-    --royal-blue-light: #162b59; /* Azul rey un poco más claro para degradados */
-    --pearl: #f8fafc;          /* Blanco perla frío */
-    --ice-blue: #eff6ff;       /* Azul hielo muy pálido (Fondos light) */
-    
+    --gold: #d4af37;
+    /* Dorado clásico */
+    --gold-light: #f3cf55;
+    /* Dorado brillo */
+    --silver: #bdc3c7;
+    /* Plata para detalles */
+    --royal-blue: #0f1c3f;
+    /* Azul noche profundo (Protagonista) */
+    --royal-blue-light: #162b59;
+    /* Azul rey un poco más claro para degradados */
+    --pearl: #f8fafc;
+    /* Blanco perla frío */
+    --ice-blue: #eff6ff;
+    /* Azul hielo muy pálido (Fondos light) */
     /* Mapeo de variables antiguas para mantener la estructura sin romper el layout */
-    --dark-purple: var(--royal-blue); 
-    --rose-gold: #c0c0c0;      /* Plata sutil en lugar de rose-gold */
-    --rose-light: var(--ice-blue); /* Reemplaza el rosa pálido por azul hielo */
-    
-    --text-color: #334155;     /* Gris pizarra oscuro para mejor legibilidad */
-    --bg-overlay: rgba(15, 28, 63, 0.85); /* Overlay azul profundo */
-    
+    --dark-purple: var(--royal-blue);
+    --rose-gold: #c0c0c0;
+    /* Plata sutil en lugar de rose-gold */
+    --rose-light: var(--ice-blue);
+    /* Reemplaza el rosa pálido por azul hielo */
+    --text-color: #334155;
+    /* Gris pizarra oscuro para mejor legibilidad */
+    --bg-overlay: rgba(15, 28, 63, 0.85);
+    /* Overlay azul profundo */
     --font-title: 'Cinzel Decorative', cursive;
     --font-body: 'Montserrat', sans-serif;
     --font-script: 'Pinyon Script', cursive;
@@ -266,7 +274,8 @@ h3 {
 
 .quote-icon {
     font-size: 2rem;
-    color: var(--gold); /* Icono dorado */
+    color: var(--gold);
+    /* Icono dorado */
     margin-bottom: 2rem;
 }
 
@@ -352,13 +361,16 @@ h3 {
 
 .detail-card:hover {
     transform: translateY(-10px);
-    border-color: var(--gold); /* Borde dorado al hover */
-    box-shadow: 0 15px 50px rgba(15, 28, 63, 0.2); /* Sombra azulada */
+    border-color: var(--gold);
+    /* Borde dorado al hover */
+    box-shadow: 0 15px 50px rgba(15, 28, 63, 0.2);
+    /* Sombra azulada */
 }
 
 .icon-box {
     font-size: 3rem;
-    color: var(--gold); /* Iconos dorados para mayor contraste y lujo */
+    color: var(--gold);
+    /* Iconos dorados para mayor contraste y lujo */
     margin-bottom: 1.5rem;
 }
 
@@ -516,7 +528,8 @@ h3 {
     font-family: var(--font-title);
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: var(--royal-blue); /* Texto Azul Rey para legibilidad y elegancia */
+    color: var(--royal-blue);
+    /* Texto Azul Rey para legibilidad y elegancia */
 }
 
 .palette {
@@ -544,31 +557,116 @@ h3 {
 
 .gallery-section {
     background-color: var(--pearl);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.gallery-item {
-    border-radius: 15px;
+    padding: 6rem 1rem;
+    /* Más espacio vertical para lucir */
     overflow: hidden;
-    height: 350px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     position: relative;
+    /* Fondo con textura sutil o gradiente muy suave */
+    background: radial-gradient(circle at center, #ffffff 0%, var(--ice-blue) 100%);
 }
 
-.gallery-item img {
+.portrait-wrapper {
+    position: relative;
+    max-width: 600px;
+    /* Tamaño generoso pero controlado */
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin: 0 auto;
+    z-index: 1;
+    border-radius: 20px;
+    /* Borde suave moderno */
+    opacity: 0;
+    transform: scale(0.95) translateY(30px);
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    /* Transición ultra suave */
+}
+
+.portrait-wrapper.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.portrait-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    /* Ligeramente menos redondeado que el contenedor */
+    box-shadow: 0 20px 60px rgba(15, 28, 63, 0.3);
+    /* Sombra profunda en azul rey */
+    position: relative;
+    z-index: 2;
+    /* Filtro para asegurar elegancia fotográfica */
+    filter: contrast(1.05) brightness(1.02);
+}
+
+
+/* Marco decorativo dorado flotante */
+
+.portrait-border {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid var(--gold);
+    border-radius: 25px;
+    /* Más radio que la imagen */
+    z-index: 1;
+    opacity: 0.6;
     transition: transform 0.8s ease;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1);
+
+/* Efecto de resplandor trasero */
+
+.portrait-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(15, 28, 63, 0.4) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+
+/* Interacción Hover */
+
+.portrait-wrapper:hover .portrait-border {
+    transform: scale(1.03);
+    border-color: var(--gold-light);
+    opacity: 1;
+}
+
+.portrait-wrapper:hover .portrait-glow {
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+    /* Glow cambia a dorado sutil */
+    filter: blur(50px);
+}
+
+.portrait-wrapper:hover .portrait-img {
+    transform: translateY(-5px);
+    transition: transform 0.5s ease;
+}
+
+
+/* Ajuste Mobile */
+
+@media (max-width: 768px) {
+    .portrait-wrapper {
+        max-width: 90%;
+        /* Ocupar más pantalla en móvil */
+        margin-top: 1rem;
+    }
+    .portrait-border {
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+    }
 }
 
 
@@ -603,7 +701,8 @@ h3 {
 
 .gift-card i {
     font-size: 2rem;
-    color: var(--gold); /* Icono dorado */
+    color: var(--gold);
+    /* Icono dorado */
     margin-bottom: 1rem;
 }
 
